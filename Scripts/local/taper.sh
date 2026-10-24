@@ -18,5 +18,5 @@ for file in "$input_dir"/*.fasta_cleaned.fasta; do
  	echo "Processing: $name"
 
 # TAPER run
-julia $JULIA_EXEC -m - -a - "$file" > "$output_dir/${name}.tp.fasta"
+julia $JULIA_EXEC -m -a "$file" > "$output_dir/${name}.tp.fasta"
 done
